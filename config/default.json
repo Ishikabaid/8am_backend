@@ -1,0 +1,5 @@
+{
+    "dbURL": "mongodb+srv://ishika:ishikabaid@cluster0.1lstfbx.mongodb.net/?retryWrites=true&w=majority",
+    "jwtsecret": "i love momos",
+    "StripeAPIKey": "YOUR STRIPE SECRET API KEY"
+}
