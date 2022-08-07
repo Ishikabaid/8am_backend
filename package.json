@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {"node": "^8 || ^10"},
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
