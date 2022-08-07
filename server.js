@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const config = require('config');
 const cookies = require('cookie-parser');
+const cors = require('cors');
 
 const authRoutes = require('./routes/auth');
 const itemRoutes = require('./routes/item');
@@ -12,6 +13,7 @@ const cartRoutes = require('./routes/cart');
 const app = express();
 app.use(cookies());
 app.use(express.json());
+app.use(cors());
 app.use('/', (req,res) => {res.json('server started')});
 
 app.use('/api',authRoutes);
