@@ -7,7 +7,7 @@ const cookies = require('cookie-parser');
 const authRoutes = require('./routes/auth');
 const itemRoutes = require('./routes/item');
 const cartRoutes = require('./routes/cart');
-const orderRoutes = require('./routes/order');
+// const orderRoutes = require('./routes/order');
 
 const app = express();
 app.use(cookies());
@@ -17,7 +17,7 @@ app.use('/', (req,res) => {res.json('server started')});
 app.use('/api',authRoutes);
 app.use('/api',itemRoutes);
 app.use('/api',cartRoutes);
-app.use('/api',orderRoutes);
+// app.use('/api',orderRoutes);
 
 // if(process.env.NODE_ENV === 'production') {
 //     app.use(express.static('client/build'));
