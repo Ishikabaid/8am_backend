@@ -12,6 +12,7 @@ const orderRoutes = require('./routes/order');
 const app = express();
 app.use(cookies());
 app.use(express.json());
+app.use('/', (req,res) => {res.json('server started')});
 
 app.use('/api',authRoutes);
 app.use('/api',itemRoutes);
@@ -31,5 +32,7 @@ const port = (process.env.PORT || 4000);
 mongoose.connect('mongodb+srv://cluster0.1lstfbx.mongodb.net/?retryWrites=true&w=majority', { user: 'ishika', pass: 'ishikabaid', useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
     console.log('db connected')
-    app.listen(port)})
+    app.listen(port,() => {
+      console.log('listening',port);
+    })})
   .catch((err) => console.log(err));
