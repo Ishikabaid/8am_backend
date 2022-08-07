@@ -14,7 +14,6 @@ const app = express();
 app.use(cookies());
 app.use(express.json());
 app.use(cors());
-app.use('/', (req,res) => {res.json('server started')});
 
 app.use('/api',authRoutes);
 app.use('/api',itemRoutes);
